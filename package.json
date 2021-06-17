@@ -1,0 +1,31 @@
+{
+  "name": "web-components",
+  "version": "1.0.0",
+  "description": "web-components",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "rm -rf dist && parcel build ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web-sessions/web-components.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/web-sessions/web-components/issues"
+  },
+  "homepage": "https://github.com/web-sessions/web-components#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-to-webcomponent": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
+    "parcel": "^2.0.0-beta.3.1",
+    "prop-types": "^15.7.2"
+  }
+}
