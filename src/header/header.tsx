@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, P, SVGContainer, Wrapp } from './style'
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css'
+import { EventHandler } from 'cross-web-components'
 
 export const Header: React.FC = () => {
+
+  const event = EventHandler.custom('[HEADER_DRAWER]')
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const toggleDrawer = (state: boolean) => setIsOpen(state)
+
+  useEffect(() => {
+    const listener = event.listener<{ state: boolean }>('[HEADER_DRAWER_CHANGE_STATE]', ({ state }) => setIsOpen(state))
+    return () => {
+      listener.unsubscribe()
+    }
+  }, [])
 
   return (
     <>

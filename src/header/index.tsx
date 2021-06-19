@@ -6,5 +6,5 @@ import { Header } from "./header";
 
 customElements.define(
   "wc-header",
-  reactToWebComponent(Header, React, ReactDOM)
+  reactToWebComponent(Header, React, ReactDOM) as any
 );
