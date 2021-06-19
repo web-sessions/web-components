@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reactToWebComponent from "react-to-webcomponent";
 
-import { Example } from "./example";
+import { Header } from "./header";
 
 customElements.define(
-  "wc-example",
-  reactToWebComponent(Example, React, ReactDOM)
+  "wc-header",
+  reactToWebComponent(Header, React, ReactDOM)
 );
